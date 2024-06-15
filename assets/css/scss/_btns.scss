@@ -1,0 +1,110 @@
+.books--btn{
+  background-color: #fff;
+  width: 160px;
+  margin-block: 25px;
+  text-align: center;
+  font-weight: 600;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
+  display: block;
+}
+.view-button {
+  font-family: "vazir";
+  transition: width 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.view-button i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.view-button-text:hover {
+  color: white;
+  background: #007bff;
+  width: 100px;
+  border-radius: 25px;
+}
+
+.view-button .button-text {
+  margin-left: .4rem;
+  display: none;
+  transition: display 0.3s ease-in-out;
+}
+
+.view-button:hover .button-text {
+  display: inline;
+}
+
+.mores--by__book{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  height: 40px;
+  &:hover{
+    border-bottom: solid 2px black;
+  }
+  span{
+    display: inline !important;
+  }
+}
+.view--button{
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  height: 40px;
+  background: none;
+  border: none;
+  &:hover{
+    border-bottom: solid 2px black;
+  }
+}
+button {
+  font-family: "vazir";
+  font-weight: 300;
+}
+.following__btn{
+  margin-right: auto;
+  padding: 8px 24px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  &:hover{
+    cursor: pointer;
+    background-color: #4f4f4d;
+  }
+}
+.btn--404{
+  text-align: center;
+  display: block;
+  max-width: 200px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #189cf0;
+  border: solid 1px #189cf0;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s all ease-in;
+  &:hover{
+    background-color: #fff;
+    color: #000;
+  }
+}

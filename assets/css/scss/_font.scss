@@ -1,0 +1,46 @@
+$font-desc: 0.85rem;
+$font-header1: 1.8rem;
+$font-header2: 1.5rem;
+$font-header3: 1.4rem;
+$font-header4: 1.2rem;
+$font-header5: 1rem;
+$font-header6: .7rem;
+$font-link: .9rem;
+$font-normal: 1rem;
+$line-height-desc: 24px;
+
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Thin.woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-SemiBold.woff2);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Regular.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Medium.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Light.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Bold.woff2);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/vazir/Vazirmatn-Black.woff2);
+  font-weight: 900;
+}

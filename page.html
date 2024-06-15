@@ -1,0 +1,256 @@
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/fonts/FontAwesome.Pro.6.5.0/fontawesome-pro-6.5.0-web/css/all.css">
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="assets/css/splide.min.css"> <!-- Splide -->
+  <link rel="stylesheet" href="assets/css/hc-offcanvas-nav.carbon.css"> <!-- off-canvas -->
+  <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+</head>
+
+<body>
+  <div class="main--container">
+    <header>
+      <div class="container">
+        <div class="flex">
+          <div class="col--auto">
+            <div class="navigation">
+              <div class="logo ml-2">
+                <img src="assets/img/Ford_logo_flat.svg" alt="" width="100%" height="60px">
+              </div>
+              <div class="menu--items">
+                <nav id="main-nav">
+                  <ul>
+                    <li>
+                      <a href="#">خانه</a>
+                    </li>
+                    <li>
+                      <a href="#">دسته بندی ها</a>
+                    </li>
+                    <li>
+                      <a href="#">بلاگ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col--auto">
+          </div>
+          <div class="col--auto">
+            <div class="search--box ml-2">
+              <form class="search-container" action="search.html">
+                <input id="search-box" type="search" class="search-box" name="q" placeholder="دنبال چه چیزی هستید؟" />
+                <label for="search-box"><i class="fa-regular fa-magnifying-glass"></i></label>
+                <input type="submit" id="search-submit" />
+              </form>
+            </div>
+            <div class="user">
+              <a href="#" onclick="toggleDropdown()">
+                <img src="assets/img/63.jpg" alt="Profile" class="user--image">
+              </a>
+              <div id="dropdown" class="dropdown-content" style="display: none;">
+                <a href="#">پروفایل</a>
+                <a href="#">تنظیمات</a>
+                <a href="#">خروج</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="breadcrumb">
+        <span>
+          <span><a href="#">صفحه اصلی</a></span> <i class="fa-regular fa-chevron-left m-1"></i>
+          <span><a href="#"></a></span>
+          <h1 class="breadcrumb_last" aria-current="page">نوشته</h1>
+        </span>
+      </div>
+      <div class="container">
+
+      </div>
+    </section>
+    <footer>
+      <div class="container flex">
+        <div class="logo--description">
+          <img src="assets/img/Ford_logo_flat.svg" alt="#">
+          <h4>کتاب</h4>
+          <p>لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر
+            کردن فضا</p>
+          <div class="social-media__icons">
+            <a href="#"><i class="fa-brands fa-telegram fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest fa-2xl"></i></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="col--auto">
+            <h4>عمومی</h4>
+            <a href="#">تلگرام</a>
+            <a href="#">تلگرام</a>
+            <a href="#">تلگرام</a>
+          </div>
+          <div class="col--auto">
+            <h4>محصولات</h4>
+            <a href="#">تلگرام</a>
+            <a href="#">تلگرام</a>
+            <a href="#">تلگرام</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="cpy__text">
+            <h4>تمامی حقوق برای این وبسایت محفوظ میباشد</h4>
+          </div>
+          <div class="tik4"><i class="fa-solid fa-code"></i>
+            ساخته شده توسط <a href="https://tik4.com/">تیک4</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script id="sweetalert2-script">
+    window.addEventListener("DOMContentLoaded", () => {
+      Swal.bindClickHandler();
+      Swal.mixin({
+        title: "این کتاب به لیست علاقه مندی های شما اضافه شد",
+        icon: "success",
+        toast: true
+      }).bindClickHandler("data-swal-toast-template");
+    })
+  </script>
+  <script id="btns-for-load-more">
+    document.querySelector('.description-toggle').addEventListener('click', function () {
+      var description = document.getElementById('description');
+      var button = this;
+      var icon = button.querySelector('i');
+
+      if (description.style.display === 'block') {
+        description.style.display = '-webkit-box'; // بازگشت به حالت اولیه
+        description.style.webkitLineClamp = 3; // بازگرداندن محدودیت خطوط به 3
+        button.innerHTML = 'نمایش بیشتر <span><i class="fa-regular fa-chevron-down"></i></span>';
+      } else {
+        description.style.display = 'block'; // حالت نمایش تمام متن
+        description.style.webkitLineClamp = 'none'; // برداشتن محدودیت خطوط
+        button.innerHTML = 'نمایش کمتر <span><i class="fa-regular fa-chevron-up"></i></span>';
+      }
+    });
+    function toggleDescription() {
+      var explanationText = document.getElementById('explanationText');
+      explanationText.classList.toggle('show'); // Toggle کلاس `show` برای تگ `<p>`
+
+      // تغییر متن دکمه بر اساس وضعیت نمایشی متن
+      var button = document.querySelector('.mores--by__book.toggle-button');
+      if (explanationText.classList.contains('show')) {
+        button.innerHTML = 'نمایش کمتر <span><i class="fa-regular fa-chevron-up"></i></span>';
+      } else {
+        button.innerHTML = 'نمایش بیشتر <span><i class="fa-regular fa-chevron-down"></i></span>';
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggleButtons = document.querySelectorAll('.toggle-button');
+      var moreInfoButtons = document.querySelectorAll('.mores--by__book');
+
+
+
+      // برای دکمه‌های اطلاعات بیشتر
+      moreInfoButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var target = document.querySelector(button.getAttribute('data-target'));
+          if (target.style.maxHeight !== '0px') {
+            target.style.maxHeight = '0px';
+            target.style.opacity = '0';
+            button.innerHTML = button.getAttribute('data-closed-text') + ' <span><i class="fa-regular fa-chevron-down"></i></span>';
+          } else {
+            target.style.display = 'block'; // ابتدا نمایش دهیم
+            setTimeout(function () {
+              target.style.maxHeight = '2000px'; // تنظیم ارتفاع کافی برای نمایش تمام محتوا
+              target.style.opacity = '1';
+            }, 10); // کوچکترین تاخیر برای اطمینان از کارکرد درست transition
+            button.innerHTML = button.getAttribute('data-open-text') + ' <span><i class="fa-regular fa-chevron-up"></i></span>';
+          }
+        });
+      });
+    });
+  </script>
+  <script id="user-dropdown">
+    function toggleDropdown() {
+      var dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches('.user--image')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.style.display === "block") {
+            openDropdown.style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+  <script id="hc-offcanvas">
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var Nav = new hcOffcanvasNav('#main-nav', {
+        disableAt: 1200,
+        navTitle: 'فهرست',
+        levelTitles: true,
+        levelTitleAsBack: true
+      });
+
+    });
+  </script>
+  <script id="carousel--script">
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('.splide', {
+        direction: "rtl",
+        perPage: 5,
+        perMove: 1,
+        breakpoints: {
+          998: {
+            perPage: "4",
+          },
+          768: {
+            perPage: "3",
+          },
+          576: {
+            perPage: "2",
+          },
+          340: {
+            perPage: "1.5"
+          }
+        }
+      });
+      splide.mount();
+    });
+  </script>
+  <script id="canvas--for--sidebar">
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "325px";
+      document.getElementById("main").style.marginLeft = "325px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script src="assets/js/splide.min.js"></script>
+  <script src="assets/js/hc-offcanvas-nav.js"></script>
+  <script src="assets/js/sweetalert2.all.min.js"></script>
+</body>
+
+</html>
